@@ -2,6 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 describe('AppComponent', () => {
@@ -9,8 +11,9 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        MatCardModule
-
+        MatCardModule,
+        MatInputModule,
+        MatAutocompleteModule
       ],
       declarations: [
         AppComponent

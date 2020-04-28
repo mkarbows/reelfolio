@@ -1,10 +1,27 @@
-<h1>reelfolio</h1>
-<input placeholder="search for dvd">
+<div class="header">
+  <h1>reelfolio</h1>
+</div>
+<div class="search">
+  <input placeholder="search for dvd">
+  <!-- <mat-form-field class="example-full-width">
+    <input type="text"
+           placeholder="Pick one"
+           aria-label="Number"
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        search
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field> -->
+</div>
 <div>
   <img 
     mat-card-image
-    style="z-index: 99999"
+    class="bongImg"
     src="https://i.dailymail.co.uk/1s/2020/02/11/04/24587812-0-image-a-77_1581396454396.jpg"
     alt="Bong Joon-Ho">
-  <img class="DVD1">
+  <mat-card class="DVD1">click here</mat-card>
 </div>
