@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bong-joon-ho';
-  bongjoonhoIMG = 'images/bongjoonho.JPG';
 }

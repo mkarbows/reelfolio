@@ -17,14 +17,8 @@
 }
 
 .DVD1 {
-  border-width: 15px;
-  width: 99px;
-  height: 147px;
   position:absolute;
-  top: 290px;
+  top: 260px;
   left: 373px;
   z-index: 2;
-  background-color: gray;
-  padding: 0px;
-  text-align: center;
 }
