@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'bong-joon-ho';
   isTemplate: boolean;
   constructor() {
-    this.isTemplate = true;
+    this.isTemplate = false;
   }
 }
 

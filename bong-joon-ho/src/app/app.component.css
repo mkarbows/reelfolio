@@ -23,6 +23,10 @@
   font-weight: bold;
 }
 
+.hidePreview {
+  display: none;
+}
+
 .bongImg {
   display: block;
   margin-left: auto;
