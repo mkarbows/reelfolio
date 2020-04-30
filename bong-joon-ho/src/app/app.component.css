@@ -4,7 +4,22 @@
 
 .search {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+}
+
+.preview {
+  text-align: center;
+  z-index: 5;
+  position: relative;
+  top: 200px;
+}
+
+.previewText {
+  transform: rotate(30deg) scale(1);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.541);
+  font-size: 60px;
+  font-weight: bold;
 }
 
 .bongImg {
@@ -16,30 +31,40 @@
   width: 634px;
 }
 
+.bw {
+  filter: grayscale(100%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  height: 479px;
+  width: 634px;
+}
+
 .DVD1 {
   position: absolute;
-  top: 260px;
+  top: 245px;
   left: 377px;
   z-index: 2;
 }
 
 .DVD2 {
   position: absolute;
-  top: 300px;
+  top: 280px;
   left: 493px;
   z-index: 2;
 }
 
 .DVD3 {
   position: absolute;
-  top: 428px;
+  top: 410px;
   left: 593px;
   z-index: 2;
 }
 
 .DVD4 {
   position: absolute;
-  top: 400px;
+  top: 380px;
   left: 733px;
   z-index: 2;
 }
