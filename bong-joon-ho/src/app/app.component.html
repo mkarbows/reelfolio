@@ -18,7 +18,7 @@
   </mat-form-field> -->
 </div>
 <div>
-  <div class="preview">
+  <div class="preview" [ngClass]="{'hidePreview': !isTemplate}">
     <div class="previewText">PREVIEW</div>
   </div>
   <img 
