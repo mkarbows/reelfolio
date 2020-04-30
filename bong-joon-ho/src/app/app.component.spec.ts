@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatButtonModule} from '@angular/material/button';
 
 
 describe('AppComponent', () => {
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
         RouterTestingModule,
         MatCardModule,
         MatInputModule,
-        MatAutocompleteModule
+        MatAutocompleteModule,
+        MatButtonModule
       ],
       declarations: [
         AppComponent
