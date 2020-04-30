@@ -17,8 +17,29 @@
 }
 
 .DVD1 {
-  position:absolute;
+  position: absolute;
   top: 260px;
-  left: 373px;
+  left: 377px;
+  z-index: 2;
+}
+
+.DVD2 {
+  position: absolute;
+  top: 300px;
+  left: 493px;
+  z-index: 2;
+}
+
+.DVD3 {
+  position: absolute;
+  top: 428px;
+  left: 593px;
+  z-index: 2;
+}
+
+.DVD4 {
+  position: absolute;
+  top: 400px;
+  left: 733px;
   z-index: 2;
 }
