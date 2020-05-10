@@ -2,7 +2,7 @@
   <h1>reelfolio</h1>
 </div>
 <div class="search">
-  <input placeholder="search for dvd" #newHero >
+  <input placeholder="search for dvd" #movieSearch >
   <!-- <mat-form-field class="example-full-width">
     <input type="text"
            placeholder="Pick one"
@@ -16,8 +16,7 @@
       </mat-option>
     </mat-autocomplete>
   </mat-form-field> -->
-  <button mat-button (click)="search(newHero.value)">search</button>
-  <p *ngIf="posterPath !== undefined">{{posterPath.results[0].poster_path}}</p>
+  <button mat-button (click)="search(movieSearch.value)">search</button>
 </div>
 <div>
   <div class="preview" [ngClass]="{'hidePreview': !isTemplate}">
@@ -29,9 +28,13 @@
       [ngClass]="{'bw': isTemplate}"
       src="https://i.dailymail.co.uk/1s/2020/02/11/04/24587812-0-image-a-77_1581396454396.jpg"
       alt="Bong Joon-Ho">
-  <app-dvd-cover class="DVD1"></app-dvd-cover>
-  <app-dvd-cover class="DVD2"></app-dvd-cover>
-  <app-dvd-cover class="DVD3"></app-dvd-cover>
-  <app-dvd-cover class="DVD4"></app-dvd-cover>
+  <button mat-button class="DVD1" (click)="search(movieSearch.value)">click here</button>
+  <button mat-button class="DVD2">click here</button>
+  <button mat-button class="DVD3">click here</button>
+  <button mat-button class="DVD4">click here</button>
   
+  <img *ngIf="poster1" [src]="poster1" class="DVD1">
+  <img *ngIf="poster2" [src]="poster2" class="DVD2">
+  <img *ngIf="poster3" [src]="poster3" class="DVD3">
+  <img *ngIf="poster4" [src]="poster4" class="DVD4">
 </div>

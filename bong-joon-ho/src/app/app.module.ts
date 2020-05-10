@@ -9,12 +9,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
-import { DvdCoverComponent } from './components/dvd-cover/dvd-cover.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DvdCoverComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +23,8 @@ import { DvdCoverComponent } from './components/dvd-cover/dvd-cover.component';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
