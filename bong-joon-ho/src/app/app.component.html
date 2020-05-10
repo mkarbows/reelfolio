@@ -2,7 +2,7 @@
   <h1>reelfolio</h1>
 </div>
 <div class="search">
-  <input placeholder="search for dvd">
+  <input placeholder="search for dvd" #newHero >
   <!-- <mat-form-field class="example-full-width">
     <input type="text"
            placeholder="Pick one"
@@ -16,6 +16,8 @@
       </mat-option>
     </mat-autocomplete>
   </mat-form-field> -->
+  <button mat-button (click)="search(newHero.value)">search</button>
+  <p *ngIf="posterPath !== undefined">{{posterPath.results[0].poster_path}}</p>
 </div>
 <div>
   <div class="preview" [ngClass]="{'hidePreview': !isTemplate}">

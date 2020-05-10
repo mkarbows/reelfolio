@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Config, MovieService } from './services/movie.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bong-joon-ho';
   isTemplate: boolean;
-  constructor() {
+  config: Config;
+  posterPath: any;
+
+  constructor(private movieService: MovieService) {
     this.isTemplate = true;
+    
   }
+
+  search(movie) {
+    this.movieService.getConfig(movie)
+    .subscribe(result => (this.posterPath = result));
+  }
+
 }
 
