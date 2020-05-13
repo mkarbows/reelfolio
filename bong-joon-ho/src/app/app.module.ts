@@ -17,10 +17,14 @@ import { ROOT_REDUCERS, metaReducers, effects } from './store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { environment } from '../environments/environment';
+import { ImageComponent } from './containers/image/image.component';
+import { PosterComponent } from './components/poster/poster.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ImageComponent,
+    PosterComponent,
   ],
   imports: [
     BrowserModule,

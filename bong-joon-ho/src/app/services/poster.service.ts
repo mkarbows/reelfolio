@@ -8,7 +8,7 @@ export interface Config {
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class PosterService {
 
   constructor(private http: HttpClient) { }
 

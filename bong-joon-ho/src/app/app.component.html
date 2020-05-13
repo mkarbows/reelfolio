@@ -18,23 +18,4 @@
   </mat-form-field> -->
   <button mat-button (click)="search(movieSearch.value)">search</button>
 </div>
-<div>
-  <div class="preview" [ngClass]="{'hidePreview': !isTemplate}">
-    <div class="previewText">PREVIEW</div>
-  </div>
-  <img 
-      mat-card-image
-      class="bongImg"
-      [ngClass]="{'bw': isTemplate}"
-      src="https://i.dailymail.co.uk/1s/2020/02/11/04/24587812-0-image-a-77_1581396454396.jpg"
-      alt="Bong Joon-Ho">
-  <button mat-button class="DVD1" (click)="setDVD(1)">click here</button>
-  <button mat-button class="DVD2" (click)="setDVD(2)">click here</button>
-  <button mat-button class="DVD3" (click)="setDVD(3)">click here</button>
-  <button mat-button class="DVD4" (click)="setDVD(4)">click here</button>
-  
-  <img *ngIf="poster1" [src]="poster1" class="DVD1">
-  <img *ngIf="poster2" [src]="poster2" class="DVD2">
-  <img *ngIf="poster3" [src]="poster3" class="DVD3">
-  <img *ngIf="poster4" [src]="poster4" class="DVD4">
-</div>
+<app-image></app-image>

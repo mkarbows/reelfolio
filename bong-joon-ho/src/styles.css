@@ -8,6 +8,107 @@ img {
   height: 130px;
   background-color: rgb(199, 199, 199);
   padding: 0px;
+  /* z-index: 3; */
+  text-align: center;
+  border-width: 15px;
+}
+
+.header {
+  text-align: center;
+}
+
+.search {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.preview {
+  z-index: 5;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  margin-left: -126px;
+}
+
+.previewText {
+  transform: rotate(30deg) scale(1);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.541);
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hidePreview {
+  display: none;
+}
+
+.bongImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  height: 479px;
+  width: 634px;
+}
+
+.bw {
+  filter: grayscale(100%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  height: 479px;
+  width: 634px;
+}
+
+.DVD1 {
+  position: absolute;
+  top: 260px;
+  left: 377px;
+  z-index: 2;
+  width: 87px;
+  height: 130px;
+  background-color: rgb(199, 199, 199);
+  padding: 0px;
+  text-align: center;
+  border-width: 15px;
+}
+
+.DVD2 {
+  position: absolute;
+  top: 300px;
+  left: 493px;
+  z-index: 2;
+  width: 87px;
+  height: 130px;
+  background-color: rgb(199, 199, 199);
+  padding: 0px;
+  text-align: center;
+  border-width: 15px;
+}
+
+.DVD3 {
+  position: absolute;
+  top: 428px;
+  left: 593px;
+  z-index: 2;
+  width: 87px;
+  height: 130px;
+  background-color: rgb(199, 199, 199);
+  padding: 0px;
+  text-align: center;
+  border-width: 15px;
+}
+
+.DVD4 {
+  position: absolute;
+  top: 400px;
+  left: 733px;
+  z-index: 2;
+  width: 87px;
+  height: 130px;
+  background-color: rgb(199, 199, 199);
+  padding: 0px;
   text-align: center;
   border-width: 15px;
 }
