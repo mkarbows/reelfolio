@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+// reducers
+import { ROOT_REDUCERS, metaReducers, effects } from './store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,9 +31,12 @@ import { StoreModule } from '@ngrx/store';
     MatInputModule,
     MatButtonModule,
     MatAutocompleteModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot(ROOT_REDUCERS, { metaReducers }),
+    EffectsModule.forRoot(effects),
+    !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
