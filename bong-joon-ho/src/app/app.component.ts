@@ -18,6 +18,10 @@ export class AppComponent {
   constructor(private movieService: PosterService) {
   }
 
+  logoLink() {
+    window.open("https://www.reelfolio.com/home", "_blank");
+  }
+
   search(movie) {
     this.movieService.getConfig(movie)
     .subscribe((result: any) => {

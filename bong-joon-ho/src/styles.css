@@ -5,6 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 
 .logo {
   width: 200px;
+  cursor: pointer;
 }
 
 .mat-h3, .mat-subheading-2, .mat-typography h3 {
