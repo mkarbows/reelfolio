@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Config, PosterService } from './services/poster.service';
 import { Movie } from 'src/assets/movie';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,13 @@ import { Movie } from 'src/assets/movie';
 })
 export class AppComponent {
   title = 'bong-joon-ho';
-  isTemplate: boolean;
   config: Config;
   movie1: Movie;
   poster1: string;
 
+  results$: Observable<any>;
+
   constructor(private movieService: PosterService) {
-    this.isTemplate = true;
   }
 
   search(movie) {

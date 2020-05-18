@@ -7,8 +7,11 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./image.component.css']
 })
 export class ImageComponent implements OnInit {
-
-  constructor(private store: Store<any>) { }
+  isTemplate: boolean;
+  
+  constructor(private store: Store<any>) {
+    this.isTemplate = true;
+  }
 
   ngOnInit(): void {
   }
