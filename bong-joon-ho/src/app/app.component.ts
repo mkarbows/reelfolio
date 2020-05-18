@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Config, PosterService } from './services/poster.service';
-import { Movie } from 'src/assets/movie';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -11,7 +10,7 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'bong-joon-ho';
   config: Config;
-  movie1: Movie;
+  movie1: any;
   poster1: string;
 
   results$: Observable<any>;
@@ -21,7 +20,7 @@ export class AppComponent {
 
   search(movie) {
     this.movieService.getConfig(movie)
-    .subscribe((result: Movie) => {
+    .subscribe((result: any) => {
       this.movie1 = result;
     });
 

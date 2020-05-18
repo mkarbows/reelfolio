@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PosterService, Config } from 'src/app/services/poster.service';
-import { Movie } from 'src/assets/movie';
 
 @Component({
   selector: 'app-poster',
@@ -10,7 +9,7 @@ import { Movie } from 'src/assets/movie';
 export class PosterComponent implements OnInit {
   isTemplate: boolean;
   config: Config;
-  movie1: Movie;
+  movie1: any;
   poster1: string;
 
   constructor(private posterService: PosterService) {
