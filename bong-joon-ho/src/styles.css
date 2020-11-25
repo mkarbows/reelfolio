@@ -1,7 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+  font-family: "FuturaLightBT";
+  src: url(/src/assets/fonts/FuturaLightBT.ttf) format("opentype");
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: black;}
+body {
+  margin: 0;
+  font-family: "FuturaLightBT", serif;
+  background-color: black;
+}
 
 .logo {
   width: 200px;
@@ -9,6 +18,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 }
 
 .mat-h3, .mat-subheading-2, .mat-typography h3 {
+  font-family: "FuturaLightBT", serif;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -21,12 +31,14 @@ h3.quote {
 }
 
 .mat-body p, .mat-body-1 p, .mat-typography p {
+  font-family: "FuturaLightBT", serif;
   margin-bottom: 0px;
   color: white;
 }
 
 p.binge {
   font-style: italic;
+  /* font-family: "FuturaLightBT", serif; */
 }
 
 p.bong {
