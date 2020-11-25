@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -8,9 +8,10 @@ import { FormControl } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   @Input() results: string[];
+  @Output() searchMovie: EventEmitter<any> = new EventEmitter<any>();
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = [];
 
   constructor() { }
 
@@ -18,6 +19,10 @@ export class SearchComponent implements OnInit {
   }
 
   search(input) {
+    this.searchMovie.emit(input);
+  }
+
+  select(input) {
     console.log(input);
   }
 

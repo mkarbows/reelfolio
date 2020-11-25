@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { Config, PosterService } from './services/poster.service';
 import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
+import * as fromStore from './store';
+import { PosterActions } from './store';
+
 
 @Component({
   selector: 'app-root',
@@ -15,11 +19,22 @@ export class AppComponent {
 
   results$: Observable<any>;
 
-  constructor(private movieService: PosterService) {
+  constructor(
+    private movieService: PosterService,
+    private store: Store<fromStore.State>
+  ) {
   }
 
   logoLink() {
     window.open("https://www.reelfolio.com/home", "_blank");
+  }
+
+  searchMovieAlert(movie){
+    console.log(movie);
+    this.store.dispatch(PosterActions.SearchMovie({ movie }));
+    // onSubmit(username: string, password: string) {
+      // store.dispatch(login({ username: username, password: password }));
+    // }
   }
 
   search(movie) {

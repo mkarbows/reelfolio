@@ -8,7 +8,7 @@
 <div class="search">
   <app-search
     [results]="results$ | async"
+    (searchMovie)="searchMovieAlert($event)"
   ></app-search>
-  <!-- <button mat-button (click)="search(movieSearch.value)">search</button> -->
 </div>
 <app-image></app-image>

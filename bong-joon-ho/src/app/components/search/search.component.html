@@ -1,15 +1,11 @@
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input type="text"
-           placeholder="Search for a dvd"
-           aria-label="Dvd"
-           matInput
-           [formControl]="myControl"
-           [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of options" [value]="option">
+    <input matInput placeholder="Search for a dvd"  value=""
+      (keyup.enter)="search($event.target.value)">
+    <mat-select *ngIf="options !== []">
+      <mat-option *ngFor="let option of options" [value]="">
         {{option}}
       </mat-option>
-    </mat-autocomplete>
+    </mat-select>
   </mat-form-field>
 </form>

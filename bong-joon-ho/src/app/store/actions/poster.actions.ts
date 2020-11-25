@@ -13,3 +13,13 @@ export const loadPostersFailure = createAction(
   '[Poster] Load Posters Failure',
   props<{ error: any }>()
 );
+
+export const SearchMovie = createAction(
+  '[Poster] Search for a movie poster',
+  props<{ movie: any }>()
+);
+
+export const login = createAction(
+  '[Login Page] Login',
+  props<{ username: string; password: string }>()
+);

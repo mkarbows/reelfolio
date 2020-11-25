@@ -53,6 +53,10 @@ p.bong {
   margin-bottom: 30px;
 }
 
+.mat-form-field-flex {
+  color: white;
+}
+
 .preview {
   z-index: 5;
   position: absolute;
