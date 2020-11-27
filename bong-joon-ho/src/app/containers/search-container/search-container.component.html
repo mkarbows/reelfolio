@@ -1,6 +1,7 @@
 <div class="search">
   <app-search
     [results]="results$ | async"
+    (searchBoxClicked)="searchBoxClickedAlert($event)"
     (searchMovie)="searchMovieAlert($event)"
   ></app-search>
 </div>

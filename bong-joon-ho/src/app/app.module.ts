@@ -44,8 +44,8 @@ import { SearchComponent } from './components/search/search.component';
     MatInputModule,
     MatButtonModule,
     MatAutocompleteModule,
-    // StoreModule.forRoot(ROOT_REDUCERS, { metaReducers }),
-    StoreModule.forRoot({ poster: fromPoster.reducer }),
+    StoreModule.forRoot(ROOT_REDUCERS, { metaReducers }),
+    // StoreModule.forRoot({ poster: fromPoster.reducer }),
     EffectsModule.forRoot(effects),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],

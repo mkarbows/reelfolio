@@ -8,7 +8,8 @@ import { FormControl } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   @Input() results: string[];
-  @Output() searchMovie: EventEmitter<any> = new EventEmitter<any>();
+  @Output() searchBoxClicked: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() searchMovie: EventEmitter<string> = new EventEmitter<string>();
 
   myControl = new FormControl();
   options: string[] = [];
@@ -18,12 +19,12 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  search(input) {
-    this.searchMovie.emit(input);
+  searchBoxClick() {
+    this.searchBoxClicked.emit(true);
   }
 
-  select(input) {
-    console.log(input);
+  search(input: string) {
+    this.searchMovie.emit(input);
   }
 
 }

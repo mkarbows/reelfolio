@@ -8,20 +8,24 @@ export const posterFeatureKey = 'poster';
 
 export interface State {
   movie: string;
+  searchBoxClicked: boolean;
 }
 
 export const initialState: State = {
-  movie: ''
+  movie: '',
+  searchBoxClicked: false
 };
 
-export const searchMovieReducer  = createReducer(
+export const reducer  = createReducer(
   initialState,
-  on(PosterActions.SearchMovie, state => ({
-    ...state,
-    movie: state.movie
-  }))
+  on(PosterActions.SearchMovie, (state: State, { movie }) => {
+    return { ...state, movie: movie };
+  }),
+  on(PosterActions.SearchBoxClicked, (state: State, { searchBoxClicked }) => {
+    return { ...state, searchBoxClicked: searchBoxClicked };
+  })
 );
 
-export function reducer(state: State | undefined, action: Action) {
-  return searchMovieReducer(state, action);
+export function PosterReducer(state: State | undefined, action: Action): State {
+  return reducer(state, action);
 }

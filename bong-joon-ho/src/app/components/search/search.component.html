@@ -1,11 +1,12 @@
 <form class="example-form">
   <mat-form-field class="example-full-width">
     <input matInput placeholder="Search for a dvd"  value=""
+      (click)="searchBoxClick()"
       (keyup.enter)="search($event.target.value)">
-    <mat-select *ngIf="options !== []">
+    <!-- <mat-select *ngIf="options !== []">
       <mat-option *ngFor="let option of options" [value]="">
         {{option}}
       </mat-option>
-    </mat-select>
+    </mat-select> -->
   </mat-form-field>
 </form>

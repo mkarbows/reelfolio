@@ -47,6 +47,6 @@ export const metaReducers: MetaReducer<State>[] = !environment.production
  * The createFeatureSelector function selects a piece of state from the root of the state object.
  * This is used for selecting feature states that are loaded eagerly or lazily.
  */
-export const getCaState = createFeatureSelector<State, fromPoster.State>(
+export const getPosterState = createFeatureSelector<State, fromPoster.State>(
   fromPoster.posterFeatureKey
 );

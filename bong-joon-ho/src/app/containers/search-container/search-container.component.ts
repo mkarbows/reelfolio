@@ -27,12 +27,12 @@ export class SearchContainerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  searchMovieAlert(movie){
-    console.log(movie);
-    this.store.dispatch(PosterActions.SearchMovie({ movie }));
-    // onSubmit(username: string, password: string) {
-      // store.dispatch(login({ username: username, password: password }));
-    // }
+  searchBoxClickedAlert(searchBoxClicked: boolean) {
+    this.store.dispatch(PosterActions.SearchBoxClicked({ searchBoxClicked: searchBoxClicked }));
+  }
+
+  searchMovieAlert(movie: string){
+    this.store.dispatch(PosterActions.SearchMovie({ movie: movie }));
   }
 
   search(movie) {

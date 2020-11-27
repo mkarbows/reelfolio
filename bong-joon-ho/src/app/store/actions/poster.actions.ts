@@ -14,12 +14,13 @@ export const loadPostersFailure = createAction(
   props<{ error: any }>()
 );
 
-export const SearchMovie = createAction(
-  '[Poster] Search for a movie poster',
-  props<{ movie: any }>()
+export const SearchBoxClicked = createAction(
+  '[SearchBox] Search box clicked',
+  props<{ searchBoxClicked: boolean }>()
 );
 
-export const login = createAction(
-  '[Login Page] Login',
-  props<{ username: string; password: string }>()
+export const SearchMovie = createAction(
+  '[Poster] Search for a movie poster',
+  props<{ movie: string }>()
 );
+
