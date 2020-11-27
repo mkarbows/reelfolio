@@ -1,3 +1,9 @@
+<div class="search">
+  <app-search
+    [results]="results$ | async"
+    (searchMovie)="searchMovieAlert($event)"
+  ></app-search>
+</div>
 <div>
   <div class="preview" [ngClass]="{'hidePreview': !isTemplate}">
     <div class="previewText">PREVIEW</div>

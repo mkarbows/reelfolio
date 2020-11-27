@@ -5,10 +5,4 @@
   <p class="binge">(while bingeing my quarantine watchlist)</p>
   <p class="bong">- Bong Joon-Ho</p>
 </div>
-<div class="search">
-  <app-search
-    [results]="results$ | async"
-    (searchMovie)="searchMovieAlert($event)"
-  ></app-search>
-</div>
-<app-image></app-image>
+<app-search-container></app-search-container>

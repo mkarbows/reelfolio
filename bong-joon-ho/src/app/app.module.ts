@@ -22,14 +22,14 @@ import { EffectsModule } from '@ngrx/effects';
 
 // components
 import { AppComponent } from './app.component';
-import { ImageComponent } from './containers/image/image.component';
+import { SearchContainerComponent } from './containers/search-container/search-container.component';
 import { PosterComponent } from './components/poster/poster.component';
 import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImageComponent,
+    SearchContainerComponent,
     PosterComponent,
     SearchComponent,
   ],
