@@ -31,12 +31,12 @@ export class SearchContainerComponent implements OnInit {
     this.store.dispatch(SearchActions.SearchBoxClicked({ searchBoxClicked: searchBoxClicked }));
   }
 
-  searchMovieAlert(movie: string){
-    this.store.dispatch(SearchActions.SearchMovie({ movie: movie }));
+  searchMovieAlert(movieName: string){
+    this.store.dispatch(SearchActions.SearchMovie({ movieName: movieName }));
   }
 
-  search(movie) {
-    this.movieService.getConfig(movie)
+  search(movieName) {
+    this.movieService.getConfig(movieName)
     .subscribe((result: any) => {
       this.movie1 = result;
     });
