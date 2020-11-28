@@ -7,7 +7,8 @@ import { PosterService, Config } from 'src/app/services/poster.service';
   styleUrls: ['./poster.component.css']
 })
 export class PosterComponent implements OnInit {
-
+  @Output() posterClicked: EventEmitter<number> = new EventEmitter<number>();
+  
   isTemplate: boolean;
   config: Config;
   movie1: any;
@@ -18,6 +19,10 @@ export class PosterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  posterClick(posterId: number) {
+    this.posterClicked.emit(posterId);
   }
 
 }
