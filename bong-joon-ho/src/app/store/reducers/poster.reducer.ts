@@ -1,22 +1,17 @@
 import { Action, createReducer, on } from '@ngrx/store';
 
 import {
-  PosterActions,
-  SearchActions
+  PosterActions
 } from '../actions';
 
 export const posterFeatureKey = 'poster';
 
 export interface State {
   posterId: number;
-  movieName: string;
-  searchBoxClicked: boolean;
 }
 
 export const initialState: State = {
-  posterId: 1,
-  movieName: '',
-  searchBoxClicked: false
+  posterId: 1
 };
 
 export const reducer  = createReducer(
@@ -26,12 +21,6 @@ export const reducer  = createReducer(
       ...state,
       posterId: posterId
     };
-  }),
-  on(SearchActions.SearchMovie, (state: State, { movieName }) => {
-    return { ...state, movieName: movieName };
-  }),
-  on(SearchActions.SearchBoxClicked, (state: State, { searchBoxClicked }) => {
-    return { ...state, searchBoxClicked: searchBoxClicked };
   })
 );
 

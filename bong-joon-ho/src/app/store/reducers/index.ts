@@ -3,16 +3,19 @@ import { InjectionToken } from '@angular/core';
 import { environment } from '../../../environments/environment';
 
 import * as fromPoster from './poster.reducer';
+import * as fromSearch from './search.reducer';
 
 export interface State {
   [fromPoster.posterFeatureKey]: fromPoster.State;
+  [fromSearch.searchFeatureKey]: fromSearch.State
 }
 
 export const ROOT_REDUCERS = new InjectionToken<
   ActionReducerMap<State, Action>
 >('Root reducers token', {
   factory: () => ({
-    [fromPoster.posterFeatureKey]: fromPoster.reducer
+    [fromPoster.posterFeatureKey]: fromPoster.reducer,
+    [fromSearch.searchFeatureKey]: fromSearch.reducer
   }),
 });
 
@@ -49,4 +52,8 @@ export const metaReducers: MetaReducer<State>[] = !environment.production
  */
 export const getPosterState = createFeatureSelector<State, fromPoster.State>(
   fromPoster.posterFeatureKey
+);
+
+export const getSearchState = createFeatureSelector<State, fromSearch.State>(
+  fromSearch.searchFeatureKey
 );
