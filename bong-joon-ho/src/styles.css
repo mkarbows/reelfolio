@@ -100,10 +100,11 @@ p.bong {
   width: 634px;
 }
 
-.DVD1 {
+.DVD1,
+.DVD2,
+.DVD3,
+.DVD4 {
   position: absolute;
-  top: 460px;
-  left: 377px;
   z-index: 2;
   width: 87px;
   height: 130px;
@@ -111,43 +112,25 @@ p.bong {
   padding: 0px;
   text-align: center;
   border-width: 15px;
+  cursor: pointer;
+}
+
+.DVD1 {
+  top: 460px;
+  left: 377px;
 }
 
 .DVD2 {
-  position: absolute;
   top: 500px;
   left: 493px;
-  z-index: 2;
-  width: 87px;
-  height: 130px;
-  background-color: rgb(199, 199, 199);
-  padding: 0px;
-  text-align: center;
-  border-width: 15px;
 }
 
 .DVD3 {
-  position: absolute;
   top: 628px;
   left: 593px;
-  z-index: 2;
-  width: 87px;
-  height: 130px;
-  background-color: rgb(199, 199, 199);
-  padding: 0px;
-  text-align: center;
-  border-width: 15px;
 }
 
 .DVD4 {
-  position: absolute;
   top: 600px;
   left: 733px;
-  z-index: 2;
-  width: 87px;
-  height: 130px;
-  background-color: rgb(199, 199, 199);
-  padding: 0px;
-  text-align: center;
-  border-width: 15px;
 }
