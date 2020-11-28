@@ -1,0 +1,12 @@
+<div>
+  <div class="preview" [ngClass]="{'hidePreview': !isTemplate}">
+    <div class="previewText">PREVIEW</div>
+  </div>
+  <img 
+      mat-card-image
+      class="bongImg"
+      [ngClass]="{'bw': isTemplate}"
+      src="https://i.dailymail.co.uk/1s/2020/02/11/04/24587812-0-image-a-77_1581396454396.jpg"
+      alt="Bong Joon-Ho">
+  <app-poster class="poster">click here</app-poster>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PosterService, Config } from 'src/app/services/poster.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { PosterService, Config } from 'src/app/services/poster.service';
   styleUrls: ['./poster.component.css']
 })
 export class PosterComponent implements OnInit {
+
   isTemplate: boolean;
   config: Config;
   movie1: any;
@@ -18,7 +19,5 @@ export class PosterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  
 
 }

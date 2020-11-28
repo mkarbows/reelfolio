@@ -14,7 +14,7 @@ export const loadPostersFailure = createAction(
   props<{ error: any }>()
 );
 
-export const PosterClicked = createAction(
-  '[Poster] Poster Clicked',
-  props<{ posterId: number }>()
-);
+// export const PosterClicked = createAction(
+//   '[Poster] Poster Clicked',
+//   props<{ posterId: number }>()
+// );

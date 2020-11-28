@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./search-container.component.css']
 })
 export class SearchContainerComponent implements OnInit {
-  isTemplate: boolean;
   config: Config;
   movie1: any;
   poster1: string;
@@ -21,9 +20,7 @@ export class SearchContainerComponent implements OnInit {
   constructor(
     private store: Store<fromStore.State>,
     private movieService: PosterService
-  ) {
-    this.isTemplate = true;
-  }
+  ) {}
 
   ngOnInit(): void {}
 

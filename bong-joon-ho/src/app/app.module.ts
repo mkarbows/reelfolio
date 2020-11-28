@@ -17,12 +17,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // reducers
 import { ROOT_REDUCERS, metaReducers, effects } from './store';
-import * as fromPoster from './store/reducers/poster.reducer';
 import { EffectsModule } from '@ngrx/effects';
+
+// containers
+import { SearchContainerComponent } from './containers/search-container/search-container.component';
+import { PosterContainerComponent } from './containers/poster-container/poster-container.component';
 
 // components
 import { AppComponent } from './app.component';
-import { SearchContainerComponent } from './containers/search-container/search-container.component';
 import { PosterComponent } from './components/poster/poster.component';
 import { SearchComponent } from './components/search/search.component';
 
@@ -32,6 +34,7 @@ import { SearchComponent } from './components/search/search.component';
     SearchContainerComponent,
     PosterComponent,
     SearchComponent,
+    PosterContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,6 @@ import { SearchComponent } from './components/search/search.component';
     MatButtonModule,
     MatAutocompleteModule,
     StoreModule.forRoot(ROOT_REDUCERS, { metaReducers }),
-    // StoreModule.forRoot({ poster: fromPoster.reducer }),
     EffectsModule.forRoot(effects),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
