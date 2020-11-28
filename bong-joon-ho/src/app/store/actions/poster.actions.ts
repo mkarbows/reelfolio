@@ -14,13 +14,4 @@ export const loadPostersFailure = createAction(
   props<{ error: any }>()
 );
 
-export const SearchBoxClicked = createAction(
-  '[SearchBox] Search box clicked',
-  props<{ searchBoxClicked: boolean }>()
-);
-
-export const SearchMovie = createAction(
-  '[Poster] Search for a movie poster',
-  props<{ movie: string }>()
-);
 

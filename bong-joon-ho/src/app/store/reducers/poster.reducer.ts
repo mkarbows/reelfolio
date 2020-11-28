@@ -1,7 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
 
 import {
-  PosterActions
+  PosterActions,
+  SearchActions
 } from '../actions';
 
 export const posterFeatureKey = 'poster';
@@ -18,10 +19,10 @@ export const initialState: State = {
 
 export const reducer  = createReducer(
   initialState,
-  on(PosterActions.SearchMovie, (state: State, { movie }) => {
+  on(SearchActions.SearchMovie, (state: State, { movie }) => {
     return { ...state, movie: movie };
   }),
-  on(PosterActions.SearchBoxClicked, (state: State, { searchBoxClicked }) => {
+  on(SearchActions.SearchBoxClicked, (state: State, { searchBoxClicked }) => {
     return { ...state, searchBoxClicked: searchBoxClicked };
   })
 );

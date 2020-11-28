@@ -100,10 +100,10 @@ p.bong {
   width: 634px;
 }
 
-.DVD1,
-.DVD2,
-.DVD3,
-.DVD4 {
+.poster1,
+.poster2,
+.poster3,
+.poster4 {
   position: absolute;
   z-index: 2;
   width: 87px;
@@ -115,22 +115,22 @@ p.bong {
   cursor: pointer;
 }
 
-.DVD1 {
+.poster1 {
   top: 460px;
   left: 377px;
 }
 
-.DVD2 {
+.poster2 {
   top: 500px;
   left: 493px;
 }
 
-.DVD3 {
+.poster3 {
   top: 628px;
   left: 593px;
 }
 
-.DVD4 {
+.poster4 {
   top: 600px;
   left: 733px;
 }

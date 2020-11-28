@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromStore from '../../store';
 import { Config, PosterService } from '../../services/poster.service';
-import { PosterActions } from '../../store';
+import { SearchActions } from '../../store';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -28,11 +28,11 @@ export class SearchContainerComponent implements OnInit {
   ngOnInit(): void {}
 
   searchBoxClickedAlert(searchBoxClicked: boolean) {
-    this.store.dispatch(PosterActions.SearchBoxClicked({ searchBoxClicked: searchBoxClicked }));
+    this.store.dispatch(SearchActions.SearchBoxClicked({ searchBoxClicked: searchBoxClicked }));
   }
 
   searchMovieAlert(movie: string){
-    this.store.dispatch(PosterActions.SearchMovie({ movie: movie }));
+    this.store.dispatch(SearchActions.SearchMovie({ movie: movie }));
   }
 
   search(movie) {
