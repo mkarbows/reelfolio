@@ -18,7 +18,7 @@ export const SearchBoxClicked = createAction(
   '[SearchBox] Search Box Clicked'
 );
 
-export const SearchMovie = createAction(
-  '[Poster] Search For a Movie Poster',
-  props<{ movieName: string }>()
+export const SearchFilm = createAction(
+  '[Poster] Search For a Film Poster',
+  props<{ filmName: string }>()
 );

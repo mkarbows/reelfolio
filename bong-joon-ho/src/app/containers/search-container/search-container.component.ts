@@ -19,7 +19,7 @@ export class SearchContainerComponent implements OnInit {
   
   constructor(
     private store: Store<fromStore.State>,
-    private movieService: PosterService
+    private posterService: PosterService
   ) {}
 
   ngOnInit(): void {}
@@ -28,12 +28,12 @@ export class SearchContainerComponent implements OnInit {
     this.store.dispatch(SearchActions.SearchBoxClicked());
   }
 
-  searchMovieAlert(movieName: string){
-    this.store.dispatch(SearchActions.SearchMovie({ movieName: movieName }));
+  searchFilmAlert(filmName: string){
+    this.store.dispatch(SearchActions.SearchFilm({ filmName: filmName }));
   }
 
-  search(movieName) {
-    this.movieService.getConfig(movieName)
+  search(filmName) {
+    this.posterService.getConfig(filmName)
     .subscribe((result: any) => {
       this.movie1 = result;
     });

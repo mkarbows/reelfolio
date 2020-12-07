@@ -4,20 +4,20 @@ import { PosterActions, SearchActions } from '../actions';
 export const searchFeatureKey = 'search';
 
 export interface State {
-  movieName: string;
+  filmName: string;
   searchBoxClicked: boolean;
 }
 
 export const initialState: State = {
-  movieName: '',
+  filmName: '',
   searchBoxClicked: false
 };
 
 
 export const reducer = createReducer(
   initialState,
-  on(SearchActions.SearchMovie, (state: State, { movieName }) => {
-    return { ...state, movieName: movieName };
+  on(SearchActions.SearchFilm, (state: State, { filmName }) => {
+    return { ...state, filmName: filmName };
   }),
   on(SearchActions.SearchBoxClicked, (state: State) => {
     return {
