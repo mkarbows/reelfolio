@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
   }
 
   searchBoxClick() {
-    this.searchBoxClicked.emit(true);
+    this.searchBoxClicked.emit();
   }
 
   search(input: string) {

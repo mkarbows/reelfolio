@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { SearchActions } from '../actions';
+import { PosterActions, SearchActions } from '../actions';
 
 export const searchFeatureKey = 'search';
 
@@ -19,8 +19,17 @@ export const reducer = createReducer(
   on(SearchActions.SearchMovie, (state: State, { movieName }) => {
     return { ...state, movieName: movieName };
   }),
-  on(SearchActions.SearchBoxClicked, (state: State, { searchBoxClicked }) => {
-    return { ...state, searchBoxClicked: searchBoxClicked };
+  on(SearchActions.SearchBoxClicked, (state: State) => {
+    return {
+      ...state,
+      searchBoxClicked: true,
+    };
+  }),
+  on(PosterActions.PosterClicked, (state: State) => {
+    return {
+      ...state,
+      searchBoxClicked: false
+    }
   })
 );
 

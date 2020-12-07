@@ -24,8 +24,8 @@ export class SearchContainerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  searchBoxClickedAlert(searchBoxClicked: boolean) {
-    this.store.dispatch(SearchActions.SearchBoxClicked({ searchBoxClicked: searchBoxClicked }));
+  searchBoxClickedAlert() {
+    this.store.dispatch(SearchActions.SearchBoxClicked());
   }
 
   searchMovieAlert(movieName: string){

@@ -15,8 +15,7 @@ export const loadSearchsFailure = createAction(
 );
 
 export const SearchBoxClicked = createAction(
-  '[SearchBox] Search Box Clicked',
-  props<{ searchBoxClicked: boolean }>()
+  '[SearchBox] Search Box Clicked'
 );
 
 export const SearchMovie = createAction(
