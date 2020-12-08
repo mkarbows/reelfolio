@@ -30,7 +30,7 @@ export const reducer  = createReducer(
       ...state,
       posterClicked: false
     }
-  })
+  }),
 );
 
 export function PosterReducer(state: State | undefined, action: Action): State {

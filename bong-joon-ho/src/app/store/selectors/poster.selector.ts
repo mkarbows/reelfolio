@@ -1,11 +1,19 @@
 import { createSelector } from '@ngrx/store';
 
 // reducers
-import * as fromPoster from '../reducers';
-// import * as fromCa from '../reducers/poster.reducer';
+import * as fromFeature from '../reducers';
+import * as fromSearch from '../reducers/search.reducer';
 
-/** get list of ca item types */
-// export const getCaTypeFilters = createSelector(
-//   fromPoster.getFilterState,
-//   fromFilter.getCaTypeFilters
-// );
+export interface SearchState {
+  filmName: string;
+  searchBoxClicked: boolean;
+  searchResults: any;
+}
+
+export const selectSearchResults = (fromSearch) => fromSearch.searchResults;
+
+export const searchResultsOptions = createSelector(
+  fromFeature.getSearchState,
+  selectSearchResults,
+  (state) => state.searchResults
+);

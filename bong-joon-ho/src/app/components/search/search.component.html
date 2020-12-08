@@ -3,10 +3,22 @@
     <input matInput placeholder="Search for a film"  value=""
       (click)="searchBoxClick()"
       (keyup.enter)="search($event.target.value)">
-    <!-- <mat-select *ngIf="options !== []">
-      <mat-option *ngFor="let option of options" [value]="">
+  </mat-form-field>
+</form>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input type="text"
+      placeholder="Search for a film"
+      aria-label="Number"
+      matInput
+      [formControl]="myControl"
+      (click)="searchBoxClick()"
+      (keyup)="search($event.target.value)"
+      [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
         {{option}}
       </mat-option>
-    </mat-select> -->
+    </mat-autocomplete>
   </mat-form-field>
 </form>

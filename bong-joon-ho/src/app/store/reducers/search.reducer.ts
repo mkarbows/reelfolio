@@ -6,18 +6,23 @@ export const searchFeatureKey = 'search';
 export interface State {
   filmName: string;
   searchBoxClicked: boolean;
+  searchResults: any;
 }
 
 export const initialState: State = {
   filmName: '',
-  searchBoxClicked: false
+  searchBoxClicked: false,
+  searchResults: ['']
 };
 
 
 export const reducer = createReducer(
   initialState,
   on(SearchActions.SearchFilm, (state: State, { filmName }) => {
-    return { ...state, filmName: filmName };
+    return {
+      ...state,
+      filmName: filmName
+    };
   }),
   on(SearchActions.SearchBoxClicked, (state: State) => {
     return {
@@ -29,6 +34,12 @@ export const reducer = createReducer(
     return {
       ...state,
       searchBoxClicked: false
+    }
+  }),
+  on(SearchActions.SearchFilmSuccess, (state: State, { searchResults }) => {
+    return {
+      ...state,
+      searchResults: searchResults.results
     }
   })
 );

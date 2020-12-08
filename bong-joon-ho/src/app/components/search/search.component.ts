@@ -7,17 +7,19 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  @Input() results: string[];
+  // @Input() results: any;
   @Output() searchBoxClicked: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() searchFilm: EventEmitter<string> = new EventEmitter<string>();
 
   myControl = new FormControl();
-  options: string[] = [];
+  options: string[] = [
+    'test1',
+    'hi'
+  ];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   searchBoxClick() {
     this.searchBoxClicked.emit();

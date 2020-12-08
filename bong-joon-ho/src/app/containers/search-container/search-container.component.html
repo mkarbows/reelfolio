@@ -1,7 +1,7 @@
 <div class="search">
   <app-search
-    [results]="results$ | async"
     (searchBoxClicked)="searchBoxClickedAlert()"
     (searchFilm)="searchFilmAlert($event)"
   ></app-search>
 </div>
+<!-- [results]="searchResults$ | async" -->
