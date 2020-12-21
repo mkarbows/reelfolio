@@ -14,15 +14,14 @@ export class SearchContainerComponent implements OnInit {
   movie1: any;
   poster1: string;
 
-  // searchResults$ = this.store.pipe(select(searchResultsOptions));
-  // searchResults$: Observable<any>;
+  searchResults$: Observable<any>;
   
   constructor(
     private store: Store<fromStore.State>,
   ) {
-    // this.searchResults$ = this.store.pipe(
-    //   select(searchResultsOptions)
-    // );
+    this.searchResults$ = this.store.pipe(
+      select(searchResultsOptions)
+    );
   }
 
   ngOnInit(): void {}

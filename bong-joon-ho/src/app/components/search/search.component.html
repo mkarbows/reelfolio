@@ -1,12 +1,5 @@
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Search for a film"  value=""
-      (click)="searchBoxClick()"
-      (keyup.enter)="search($event.target.value)">
-  </mat-form-field>
-</form>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
     <input type="text"
       placeholder="Search for a film"
       aria-label="Number"
@@ -16,8 +9,10 @@
       (keyup)="search($event.target.value)"
       [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of options" [value]="option">
-        {{option}}
+      <mat-option *ngFor="let option of results" [value]="option.title">
+        <img class="example-option-img" aria-hidden src="https://image.tmdb.org/t/p/w500/{{option.poster_path}}" height="25">
+        {{option.title}}
+        <small>{{option.release_date}}</small>
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>

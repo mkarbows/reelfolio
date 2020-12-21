@@ -1,19 +1,10 @@
-import { createSelector } from '@ngrx/store';
+import { createSelector, createFeatureSelector } from '@ngrx/store';
 
-// reducers
-import * as fromFeature from '../reducers';
-import * as fromSearch from '../reducers/search.reducer';
+import { State } from '../reducers/search.reducer';
 
-export interface SearchState {
-  filmName: string;
-  searchBoxClicked: boolean;
-  searchResults: any;
-}
-
-export const selectSearchResults = (fromSearch) => fromSearch.searchResults;
+export const searchState = createFeatureSelector<State>('search');
 
 export const searchResultsOptions = createSelector(
-  fromFeature.getSearchState,
-  selectSearchResults,
-  (state) => state.searchResults
-);
+  searchState,
+  (state: State) => state.searchResults
+)

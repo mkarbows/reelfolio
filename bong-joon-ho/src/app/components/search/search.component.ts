@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  // @Input() results: any;
+  @Input() results: any;
   @Output() searchBoxClicked: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() searchFilm: EventEmitter<string> = new EventEmitter<string>();
 
@@ -27,6 +27,7 @@ export class SearchComponent implements OnInit {
 
   search(input: string) {
     this.searchFilm.emit(input);
+    console.log(this.results);
   }
 
 }
