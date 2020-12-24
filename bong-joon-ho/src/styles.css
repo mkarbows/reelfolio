@@ -57,14 +57,8 @@ p.bong {
   margin-bottom: 30px;
 }
 
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
+.mat-form-field {
+  width: 50%;
 }
 
 .mat-form-field-flex {
