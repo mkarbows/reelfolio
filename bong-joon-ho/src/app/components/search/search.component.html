@@ -10,10 +10,14 @@
       [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let option of results" [value]="option.title">
-        <img class="example-option-img" aria-hidden src="https://image.tmdb.org/t/p/w500/{{option.poster_path}}" height="25">
+        <img class="example-option-img"
+          aria-hidden src="https://image.tmdb.org/t/p/w500/{{option.poster_path}}"
+          height="25"
+          *ngIf="results.length > 0 && option.poster_path != null">
         {{option.title}}
-        <small>{{option.release_date}}</small>
+        <small *ngIf="results.length > 0"> | {{option.release_date}}</small>
       </mat-option>
+      <mat-option *ngIf="results.length == 0">No Results</mat-option>
     </mat-autocomplete>
   </mat-form-field>
 </form>

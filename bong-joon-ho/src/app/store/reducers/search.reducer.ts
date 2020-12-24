@@ -12,7 +12,7 @@ export interface State {
 export const initialState: State = {
   filmName: '',
   searchBoxClicked: false,
-  searchResults: ['']
+  searchResults: []
 };
 
 
